@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-page="project">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gull Quest — Case study | Kaspian Rowe</title>
+<meta name="description" content="A creature-collector adventure built by a team of five during a 48-hour game jam in Oslo: catch the twelve gulls of the harbour, in the browser and on a handheld badge.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2032%2032'%3E%3Crect%20width%3D'32'%20height%3D'32'%20fill%3D'%23050505'%2F%3E%3Crect%20x%3D'3.5'%20y%3D'3.5'%20width%3D'25'%20height%3D'25'%20fill%3D'none'%20stroke%3D'%23f2f2ee'%2F%3E%3Ctext%20x%3D'16'%20y%3D'23'%20font-family%3D'Arial%20Narrow%2CArial'%20font-weight%3D'700'%20font-size%3D'16'%20text-anchor%3D'middle'%20fill%3D'%23f2f2ee'%3EKR%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("kr-booted"))document.documentElement.classList.add("returning")}catch(e){}</script>
+<style>.js .returning-hide{}</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Skip to main content</a>
+<div class="cursor-ring" aria-hidden="true"><div class="cursor-ring-inner"><span class="cursor-label"></span></div></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="shell" id="shell" role="status" aria-label="Loading">
+  <div class="shell-top"><span>Kaspian Rowe — Portfolio</span><span>©2026</span></div>
+  <ol class="shell-log" id="shell-log"></ol>
+  <div>
+    <div class="shell-bottom"><span class="shell-count" id="shell-count">000</span><span class="shell-geo">Bergen, NO — 60.39°N</span></div>
+    <div class="shell-bar"><i id="shell-bar"></i></div>
+  </div>
+</div>
+<header class="site-header">
+<nav class="nav" aria-label="Navigation">
+  <a class="nav-link nav-brand" href="../index.html">Kaspian<span>.</span>Rowe</a>
+  <ul class="nav-list nav-left"><li><a href="../index.html#about" data-nav="about" class="nav-link"><span class="num">01</span><span data-i18n="nav.about">About</span><span class="ul"></span></a></li><li><a href="../index.html#projects" data-nav="projects" aria-current="page" class="nav-link active"><span class="num">02</span><span data-i18n="nav.projects">Projects</span><span class="ul"></span></a></li></ul>
+  <a class="mono-logo" href="../index.html" aria-label="KR — Home" data-mono>KR</a>
+  <ul class="nav-list nav-right"><li><a href="../lab.html" data-nav="lab" class="nav-link"><span class="num">03</span><span data-i18n="nav.lab">Lab</span><span class="ul"></span></a></li><li><a href="../index.html#contact" data-nav="contact" class="nav-link"><span class="num">04</span><span data-i18n="nav.contact">Contact</span><span class="ul"></span></a></li></ul>
+  <div class="nav-tools">
+    <ul class="nav-compact"><li><a class="nav-link" href="../index.html#about" data-i18n="nav.about">About</a></li><li><a class="nav-link" href="../index.html#projects" data-i18n="nav.projects">Projects</a></li><li><a class="nav-link" href="../lab.html" data-i18n="nav.lab">Lab</a></li><li><a class="nav-link" href="../index.html#contact" data-i18n="nav.contact">Contact</a></li></ul>
+    <button type="button" class="lang" data-lang-toggle aria-label="FR EN — Change language"><span data-l="fr">FR</span><span data-l="en" class="on">EN</span></button>
+    <button type="button" class="btn-ghost menu-btn" aria-expanded="false" aria-controls="mobile-nav" data-menu data-i18n="ui.menu">Menu</button>
+  </div>
+</nav>
+</header>
+<div class="mnav" id="mobile-nav" aria-hidden="true">
+  <ol><li><a href="../index.html#about" style="--i:0"><span data-i18n="nav.about">About</span><span class="label">01</span></a></li><li><a href="../index.html#projects" style="--i:1"><span data-i18n="nav.projects">Projects</span><span class="label">02</span></a></li><li><a href="../lab.html" style="--i:2"><span data-i18n="nav.lab">Lab</span><span class="label">03</span></a></li><li><a href="../index.html#contact" style="--i:3"><span data-i18n="nav.contact">Contact</span><span class="label">04</span></a></li></ol>
+</div>
+<div id="main-content" tabindex="-1">
+<main>
+<section class="px page-head cs-head" style="border-bottom:0">
+  <div style="display:flex;justify-content:space-between;align-items:center"><a class="label back" href="../projects.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back</a><p class="label">Case study · <span class="t-paper">08</span> / 11</p></div>
+  <h1 class="display split" data-split style="margin-top:48px"><span class="sr-only">Gull Quest</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">G</span><span class="char" style="--i:1">u</span><span class="char" style="--i:2">l</span><span class="char" style="--i:3">l</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:4">Q</span><span class="char" style="--i:5">u</span><span class="char" style="--i:6">e</span><span class="char" style="--i:7">s</span><span class="char" style="--i:8">t</span></span></h1>
+  <p class="sub">A 48-hour game jam collector</p>
+  <div class="facts" style="margin-top:40px;max-width:548px">
+    <div class="row"><span>Year</span><span>2026</span></div>
+    <div class="row"><span>Status</span><span>In progress</span></div>
+    <div class="row"><span>Type</span><span>Personal project</span></div>
+    <div class="row"><span>Languages</span><span>JavaScript · Canvas</span></div>
+  </div>
+  <figure class="cs-fig">
+    <div class="pix" data-pix="../assets/img/p-gull.jpg" role="img" aria-label="Gull Quest preview" data-cursor="Colour"><canvas></canvas><img class="reveal-img" src="../assets/img/p-gull.jpg" alt=""><span class="bd"></span></div>
+    <figcaption class="label"><span>Fig. 01 — Gull Quest</span><span>Hover for colour</span></figcaption>
+  </figure>
+</section>
+<section class="px cs-intro">
+  <div><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">01</span> / 05 ]</span><span>·</span><span>About the project</span></div><p class="lead scrollwords" data-scrollwords style="margin-top:24px"><span class="word">A </span><span class="word">creature-collector </span><span class="word">adventure </span><span class="word">built </span><span class="word">by </span><span class="word">a </span><span class="word">team </span><span class="word">of </span><span class="word">five </span><span class="word">during </span><span class="word">a </span><span class="word">48-hour </span><span class="word">game </span><span class="word">jam </span><span class="word">in </span><span class="word">Oslo: </span><span class="word">catch </span><span class="word">the </span><span class="word">twelve </span><span class="word">gulls </span><span class="word">of </span><span class="word">the </span><span class="word">harbour, </span><span class="word">in </span><span class="word">the </span><span class="word">browser </span><span class="word">and </span><span class="word">on </span><span class="word">a </span><span class="word">handheld </span><span class="word">badge. </span></p><div class="body" style="margin-top:32px"><p class="reveal">Five people, 48 hours, one harbour full of gulls. I wrote the engine loop, the collision system and the badge controller bridge.</p></div></div>
+  <aside class="reveal"><div class="facts crosshair" style="border:1px solid var(--line);padding:20px">
+    <p class="label" style="margin-bottom:8px">Overview</p>
+    <div class="row"><span>Client</span><span>Self-initiated</span></div>
+    <div class="row"><span>Role</span><span>Design · Build · Ship</span></div>
+    <div class="row"><span>Year</span><span>2026</span></div>
+    <div class="btns"><a class="btn-ghost btn-between" href="../index.html#contact">Discuss a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div></aside>
+</section>
+<section class="cells" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-left:0">
+  <div style="padding:32px var(--gx)"><p class="display" style="font-size:clamp(4rem,7vw,7rem);line-height:.85"><span data-counter="3">00</span></p><p class="label" style="margin-top:12px">Main features</p></div><div style="padding:32px var(--gx)"><p class="display" style="font-size:clamp(4rem,7vw,7rem);line-height:.85"><span data-counter="2">00</span></p><p class="label" style="margin-top:12px">Technical challenges</p></div><div style="padding:32px var(--gx)"><p class="display" style="font-size:clamp(4rem,7vw,7rem);line-height:.85"><span data-counter="3">00</span></p><p class="label" style="margin-top:12px">Technologies</p></div><div style="padding:32px var(--gx)"><p class="display" style="font-size:clamp(4rem,7vw,7rem);line-height:.85"><span data-counter="2026">2026</span></p><p class="label" style="margin-top:12px">Year</p></div>
+</section>
+<section class="px cs-sec">
+  <div class="head"><div><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">02</span> / 05 ]</span><span>·</span><span>Gallery</span></div><h2 class="heading split" data-split style="margin-top:16px"><span class="sr-only">In the wild</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">I</span><span class="char" style="--i:1">n</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:2">t</span><span class="char" style="--i:3">h</span><span class="char" style="--i:4">e</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:5">w</span><span class="char" style="--i:6">i</span><span class="char" style="--i:7">l</span><span class="char" style="--i:8">d</span></span></h2></div><p class="label">Stills · dithered, hover for colour</p></div>
+  <div class="gallery"><div class="pix" data-pix="../assets/img/code.jpg" style="aspect-ratio:4/3"><canvas></canvas><img class="reveal-img" src="../assets/img/code.jpg" alt="" loading="lazy"><span class="bd"></span></div><div class="pix" data-pix="../assets/img/servers.jpg" style="aspect-ratio:4/3"><canvas></canvas><img class="reveal-img" src="../assets/img/servers.jpg" alt="" loading="lazy"><span class="bd"></span></div></div>
+</section>
+<section class="px cs-sec">
+  <div class="cs-intro" style="padding:0;border:0">
+    <div style="grid-column:span 4"><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">03</span> / 05 ]</span><span>·</span><span>Main features</span></div><h2 class="heading split" data-split style="margin-top:16px"><span class="sr-only">What it does</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">W</span><span class="char" style="--i:1">h</span><span class="char" style="--i:2">a</span><span class="char" style="--i:3">t</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:4">i</span><span class="char" style="--i:5">t</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:6">d</span><span class="char" style="--i:7">o</span><span class="char" style="--i:8">e</span><span class="char" style="--i:9">s</span></span></h2></div>
+    <ol class="numlist cells c2" style="grid-column:5 / span 8;border-left:1px solid var(--line)"><li style="padding:20px;border-top:0" class="reveal"><span class="n">01</span><span style="line-height:1.55;color:var(--p80)">Tile-based world with day/night cycle</span></li><li style="padding:20px;border-top:0" class="reveal"><span class="n">02</span><span style="line-height:1.55;color:var(--p80)">Badge as controller and second screen</span></li><li style="padding:20px;border-top:0" class="reveal"><span class="n">03</span><span style="line-height:1.55;color:var(--p80)">Twelve collectible gulls</span></li></ol>
+  </div>
+</section>
+<section class="px cs-sec">
+  <div class="cs-intro" style="padding:0;border:0">
+    <div style="grid-column:span 4"><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">04</span> / 05 ]</span><span>·</span><span>Technical challenges</span></div><h2 class="heading split" data-split style="margin-top:16px"><span class="sr-only">How it was solved</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">H</span><span class="char" style="--i:1">o</span><span class="char" style="--i:2">w</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:3">i</span><span class="char" style="--i:4">t</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:5">w</span><span class="char" style="--i:6">a</span><span class="char" style="--i:7">s</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:8">s</span><span class="char" style="--i:9">o</span><span class="char" style="--i:10">l</span><span class="char" style="--i:11">v</span><span class="char" style="--i:12">e</span><span class="char" style="--i:13">d</span></span></h2></div>
+    <ol class="numlist" style="grid-column:5 / span 8"><li class="reveal"><span class="display" style="font-size:44px;color:var(--p40)">01</span><span style="line-height:1.55;color:var(--p80)">Scope in 48 hours</span></li><li class="reveal"><span class="display" style="font-size:44px;color:var(--p40)">02</span><span style="line-height:1.55;color:var(--p80)">Merging five people's code at 3 a.m.</span></li></ol>
+  </div>
+</section>
+<section class="px cs-sec">
+  <div class="cs-intro" style="padding:0;border:0">
+    <div style="grid-column:span 4"><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">05</span> / 05 ]</span><span>·</span><span>Technologies</span></div><h2 class="heading split" data-split style="margin-top:16px"><span class="sr-only">Stack</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">S</span><span class="char" style="--i:1">t</span><span class="char" style="--i:2">a</span><span class="char" style="--i:3">c</span><span class="char" style="--i:4">k</span></span></h2></div>
+    <div style="grid-column:5 / span 8"><div class="facts"><div class="row" style="align-items:center"><span>Game</span><div class="chips"><span class="chip ">JavaScript</span><span class="chip ">Canvas 2D</span></div></div></div><div class="facts"><div class="row" style="align-items:center"><span>Tools</span><div class="chips"><span class="chip ">Web Serial</span></div></div></div>
+      <p class="tags">#gamejam #canvas</p></div>
+  </div>
+</section>
+<a class="next-proj px" href="saltmarket.html" data-cursor="Next">
+  <div class="row label"><span>Next project</span><span>09 / 11</span></div>
+  <p class="display">Saltmarket <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+  <p class="label" style="margin-top:16px">Read the case study →</p>
+</a>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="foot-art">
+    <img src="../assets/art/ridge-lines.png" alt="" loading="lazy">
+    <div class="sh"></div>
+    <p class="display foot-name prox" data-prox="120,520" aria-label="Kaspian Rowe"><span class="char" aria-hidden="true">K</span><span class="char" aria-hidden="true">a</span><span class="char" aria-hidden="true">s</span><span class="char" aria-hidden="true">p</span><span class="char" aria-hidden="true">i</span><span class="char" aria-hidden="true">a</span><span class="char" aria-hidden="true">n</span><span class="char" aria-hidden="true">&nbsp;</span><span class="char" aria-hidden="true">R</span><span class="char" aria-hidden="true">o</span><span class="char" aria-hidden="true">w</span><span class="char" aria-hidden="true">e</span></p>
+  </div>
+  <div class="foot-grid px">
+    <div class="foot-brand">
+      <div class="r1"><span class="mk">KR</span><button type="button" class="star-btn " data-star="footer" aria-label="Hidden star" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button></div>
+      <p class="t1">Full-stack &amp; AI developer — Bergen, Norway.</p>
+      <p class="t2">I help teams automate, streamline and modernise their operations through software, cloud and artificial intelligence.</p>
+    </div>
+    <nav class="foot-col" aria-label="Navigation"><p class="label">01</p><h3 class="heading">Navigation</h3><ul><li><a class="foot-link" href="../index.html">Home</a></li><li><a class="foot-link" href="../projects.html">Projects</a></li><li><a class="foot-link" href="../lab.html">Lab</a></li></ul></nav>
+    <nav class="foot-col" aria-label="Social"><p class="label">02</p><h3 class="heading">Social</h3><ul>
+      <li><a class="foot-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+      <li><a class="foot-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+      <li><a class="foot-link" href="mailto:hello@kaspianrowe.dev">Email ↗</a></li></ul></nav>
+    <nav class="foot-col" aria-label="Legal"><p class="label">03</p><h3 class="heading">Legal</h3><ul>
+      <li><a class="foot-link" href="../privacy-policy.html">Privacy policy</a></li>
+      <li><a class="foot-link" href="../legal-notice.html">Legal notice</a></li>
+      <li><button type="button" class="foot-link" data-cookie-open>Manage cookies</button></li></ul></nav>
+    <div class="foot-col"><p class="label">04</p><h3 class="heading">Bergen</h3><p class="mono">Vestland, Norway</p><p class="mono" style="color:var(--p55)">60.39°N · 5.32°E</p></div>
+  </div>
+  <div class="foot-bar px">
+    <div class="space"><p class="label">© 2026 Kaspian Rowe. All rights reserved</p><p class="label" style="color:var(--p55)">Design &amp; code — Kaspian Rowe · Big Shoulders Display, Geist · Vanilla JS, Canvas, WebGL</p></div>
+    <p class="label stars" title="Stars are hidden across the site…"><span>✦</span><span data-star-count>0 / 3 stars found</span></p>
+    <button type="button" class="label" data-top aria-label="Back to top">Back to top <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+  </div>
+</footer>
+</div>
+<div class="assist" data-assist>
+  <div class="assist-tip crosshair" data-assist-tip><p>A question about my work? Ask my assistant.</p><button type="button" aria-label="Hide invitation" data-assist-hide><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <button type="button" class="assist-btn" aria-label="KR Assistant — Open chat" data-chat-open data-cursor="Chat"><span class="mk">KR<span class="ping"><i></i><b></b></span></span><span class="label" data-i18n="ui.assistant">Assistant</span></button>
+</div>
+<section class="chat" role="dialog" aria-modal="false" aria-label="KR Assistant" data-chat>
+  <div class="chat-head"><span class="mk">KR</span><div class="ttl"><b>Assistant</b><span class="label">Online · local answers</span></div>
+    <button type="button" aria-label="Reset conversation" data-chat-reset><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.5M4 4v4.5h4.5"/></svg></button><button type="button" aria-label="Minimise" data-chat-min><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14"/></svg></button><button type="button" aria-label="Close chat" data-chat-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="chat-body" data-chat-body aria-live="polite"></div>
+  <div class="chat-sugg no-scrollbar" data-chat-sugg></div>
+  <form class="chat-form" data-chat-form autocomplete="off"><span class="pr" aria-hidden="true">›</span><label class="sr-only" for="chat-in">Your question</label><input id="chat-in" name="q" placeholder="Type your message..." maxlength="300"><button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button></form>
+</section>
+<div class="cookie" role="dialog" aria-label="Cookies &amp; privacy" data-cookie>
+  <p class="label">✦ Cookies &amp; Privacy</p>
+  <p class="t">This site uses cookies to improve your experience (anonymous analytics, preferences) and to catch technical errors. Your data is handled in line with GDPR. <a href="../privacy-policy.html">privacy policy</a></p>
+  <div class="row"><button type="button" class="btn-ghost" data-cookie-no>Decline</button><button type="button" class="btn-solid" data-cookie-yes>Accept</button></div>
+</div>
+<div class="toast" role="status" aria-live="polite" data-toast><span>✦</span><span class="label" data-toast-text></span></div>
+<div class="modal" role="dialog" aria-modal="true" aria-label="Star game" data-game>
+  <div class="modal-box crosshair">
+    <div class="modal-head"><span class="label t-paper">✦ StarGame · catch the falling stars</span><button type="button" aria-label="Close game" data-game-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <canvas data-game-canvas width="960" height="600"></canvas>
+    <div class="modal-foot"><span class="label" data-game-score>Score 000</span><span class="label">← → or drag · Esc to quit</span></div>
+  </div>
+</div>
+<div class="curtain curtain-a" aria-hidden="true"></div>
+<div class="curtain curtain-b" aria-hidden="true"><span class="label" data-curtain-label>Index</span></div>
+<script src="../assets/js/landmask.js"></script>
+<script src="../assets/js/thumbs.js"></script>
+<script src="../assets/js/fx.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/chat.js" defer></script>
+
+</body>
+</html>

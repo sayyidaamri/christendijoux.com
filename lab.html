@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-page="lab">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lab — Kaspian Rowe</title>
+<meta name="description" content="The site taken apart: components dissected and experiments.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2032%2032'%3E%3Crect%20width%3D'32'%20height%3D'32'%20fill%3D'%23050505'%2F%3E%3Crect%20x%3D'3.5'%20y%3D'3.5'%20width%3D'25'%20height%3D'25'%20fill%3D'none'%20stroke%3D'%23f2f2ee'%2F%3E%3Ctext%20x%3D'16'%20y%3D'23'%20font-family%3D'Arial%20Narrow%2CArial'%20font-weight%3D'700'%20font-size%3D'16'%20text-anchor%3D'middle'%20fill%3D'%23f2f2ee'%3EKR%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("kr-booted"))document.documentElement.classList.add("returning")}catch(e){}</script>
+<style>.js .returning-hide{}</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Skip to main content</a>
+<div class="cursor-ring" aria-hidden="true"><div class="cursor-ring-inner"><span class="cursor-label"></span></div></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="shell" id="shell" role="status" aria-label="Loading">
+  <div class="shell-top"><span>Kaspian Rowe — Portfolio</span><span>©2026</span></div>
+  <ol class="shell-log" id="shell-log"></ol>
+  <div>
+    <div class="shell-bottom"><span class="shell-count" id="shell-count">000</span><span class="shell-geo">Bergen, NO — 60.39°N</span></div>
+    <div class="shell-bar"><i id="shell-bar"></i></div>
+  </div>
+</div>
+<header class="site-header">
+<nav class="nav" aria-label="Navigation">
+  <a class="nav-link nav-brand" href="index.html">Kaspian<span>.</span>Rowe</a>
+  <ul class="nav-list nav-left"><li><a href="index.html#about" data-nav="about" class="nav-link"><span class="num">01</span><span data-i18n="nav.about">About</span><span class="ul"></span></a></li><li><a href="index.html#projects" data-nav="projects" class="nav-link"><span class="num">02</span><span data-i18n="nav.projects">Projects</span><span class="ul"></span></a></li></ul>
+  <a class="mono-logo" href="index.html" aria-label="KR — Home" data-mono>KR</a>
+  <ul class="nav-list nav-right"><li><a href="lab.html" data-nav="lab" aria-current="page" class="nav-link active"><span class="num">03</span><span data-i18n="nav.lab">Lab</span><span class="ul"></span></a></li><li><a href="index.html#contact" data-nav="contact" class="nav-link"><span class="num">04</span><span data-i18n="nav.contact">Contact</span><span class="ul"></span></a></li></ul>
+  <div class="nav-tools">
+    <ul class="nav-compact"><li><a class="nav-link" href="index.html#about" data-i18n="nav.about">About</a></li><li><a class="nav-link" href="index.html#projects" data-i18n="nav.projects">Projects</a></li><li><a class="nav-link" href="lab.html" data-i18n="nav.lab">Lab</a></li><li><a class="nav-link" href="index.html#contact" data-i18n="nav.contact">Contact</a></li></ul>
+    <button type="button" class="lang" data-lang-toggle aria-label="FR EN — Change language"><span data-l="fr">FR</span><span data-l="en" class="on">EN</span></button>
+    <button type="button" class="btn-ghost menu-btn" aria-expanded="false" aria-controls="mobile-nav" data-menu data-i18n="ui.menu">Menu</button>
+  </div>
+</nav>
+</header>
+<div class="mnav" id="mobile-nav" aria-hidden="true">
+  <ol><li><a href="index.html#about" style="--i:0"><span data-i18n="nav.about">About</span><span class="label">01</span></a></li><li><a href="index.html#projects" style="--i:1"><span data-i18n="nav.projects">Projects</span><span class="label">02</span></a></li><li><a href="lab.html" style="--i:2"><span data-i18n="nav.lab">Lab</span><span class="label">03</span></a></li><li><a href="index.html#contact" style="--i:3"><span data-i18n="nav.contact">Contact</span><span class="label">04</span></a></li></ol>
+</div>
+<div id="main-content" tabindex="-1">
+<main>
+<section class="px lab-hero">
+  <div><a class="label back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Home</a><div style="margin-top:32px"><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">00</span> / 02 ]</span><span>·</span><span>Laboratory</span></div></div><h1 class="display split prox" data-split data-prox="300,800"><span class="sr-only">Lab</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">L</span><span class="char" style="--i:1">a</span><span class="char" style="--i:2">b</span></span></h1></div>
+  <div><p class="intro">Here I take this site apart, piece by piece. Every component is shown live, with what it does, why it exists, how it works and what I honestly think of it. Further down: free experiments with no brief.</p>
+    <nav><a href="#components"><p class="n"><span data-counter="12">00</span></p><p class="label">01 · Components</p></a><a href="#experiments"><p class="n"><span data-counter="4">00</span></p><p class="label">02 · Experiments</p></a></nav></div>
+</section>
+<section id="components">
+  <div class="px lab-sec-head"><div><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">01</span> / 02 ]</span><span>·</span><span>Components</span></div><h2 class="display split" data-split><span class="sr-only">Components</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">C</span><span class="char" style="--i:1">o</span><span class="char" style="--i:2">m</span><span class="char" style="--i:3">p</span><span class="char" style="--i:4">o</span><span class="char" style="--i:5">n</span><span class="char" style="--i:6">e</span><span class="char" style="--i:7">n</span><span class="char" style="--i:8">t</span><span class="char" style="--i:9">s</span></span></h2></div><p>Everything the site is made of, one by one. Live demos, readable source in assets/js.</p></div>
+  <article class="comp" id="c-dither-hero">
+  <div class="comp-info">
+    <p class="label path">C—01 · components/webgl/dither-hero.js</p>
+    <h3 class="display split" data-split><span class="sr-only">DitherHero</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">D</span><span class="char" style="--i:1">i</span><span class="char" style="--i:2">t</span><span class="char" style="--i:3">h</span><span class="char" style="--i:4">e</span><span class="char" style="--i:5">r</span><span class="char" style="--i:6">H</span><span class="char" style="--i:7">e</span><span class="char" style="--i:8">r</span><span class="char" style="--i:9">o</span></span></h3>
+    <p class="what">The dithered organic sphere behind the hero. It breathes, follows the cursor like a loupe and dissolves as you scroll.</p>
+    <dl><div><dt class="label">Why</dt><dd>I wanted an identity with no photography: two colours, one algorithm. A video would weigh megabytes; the shader weighs a few kilobytes.</dd></div><div><dt class="label">How</dt><dd>Raw WebGL, one full-screen triangle. A raymarched sphere warped by 3D noise, lit from its normal, then quantised with an 8×8 Bayer matrix. Pixel size scales with the screen so phones do far less work.</dd></div></dl>
+    <ul class="chips"><li class="chip">WebGL</li><li class="chip">GLSL</li><li class="chip">Raymarching</li><li class="chip">Bayer 8×8</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Medium. Paused off-screen, half resolution on phones.</span></div><p class="verdict"><b>Verdict —</b> The centrepiece — it gives the site its face. Next time: a low-power mode driven by the GPU, not the screen size.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="dither">
+    <span class="label live">live</span>
+    <canvas data-fx="dither" data-dither-scale="1"></canvas>
+  </div>
+</article>
+<article class="comp" id="c-kinetic">
+  <div class="comp-info">
+    <p class="label path">C—02 · components/ui/kinetic.js</p>
+    <h3 class="display split" data-split><span class="sr-only">SplitText · proximity weight</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">S</span><span class="char" style="--i:1">p</span><span class="char" style="--i:2">l</span><span class="char" style="--i:3">i</span><span class="char" style="--i:4">t</span><span class="char" style="--i:5">T</span><span class="char" style="--i:6">e</span><span class="char" style="--i:7">x</span><span class="char" style="--i:8">t</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:9">·</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:10">p</span><span class="char" style="--i:11">r</span><span class="char" style="--i:12">o</span><span class="char" style="--i:13">x</span><span class="char" style="--i:14">i</span><span class="char" style="--i:15">m</span><span class="char" style="--i:16">i</span><span class="char" style="--i:17">t</span><span class="char" style="--i:18">y</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:19">w</span><span class="char" style="--i:20">e</span><span class="char" style="--i:21">i</span><span class="char" style="--i:22">g</span><span class="char" style="--i:23">h</span><span class="char" style="--i:24">t</span></span></h3>
+    <p class="what">Headings reveal letter by letter, and their weight swells as the cursor comes near.</p>
+    <dl><div><dt class="label">Why</dt><dd>Give type depth without images or video: the words themselves become the interactive layer.</dd></div><div><dt class="label">How</dt><dd>Words are split into masked letters and slid in. A variable font's wght axis is driven by distance to the cursor, smoothed each frame. The loop sleeps when nothing moves.</dd></div></dl>
+    <ul class="chips"><li class="chip">Variable fonts</li><li class="chip">rAF</li><li class="chip">IntersectionObserver</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Low. No loop while idle.</span></div><p class="verdict"><b>Verdict —</b> Great effect-to-cost ratio and accessible: the full text stays available to screen readers. Off on touch screens.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="kinetic">
+    <span class="label live">live</span>
+    <p class="display prox split" data-split data-prox="200,900" style="font-size:clamp(4rem,8vw,8rem);text-align:center;position:relative"><span class="sr-only">Come closer</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">C</span><span class="char" style="--i:1">o</span><span class="char" style="--i:2">m</span><span class="char" style="--i:3">e</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:4">c</span><span class="char" style="--i:5">l</span><span class="char" style="--i:6">o</span><span class="char" style="--i:7">s</span><span class="char" style="--i:8">e</span><span class="char" style="--i:9">r</span></span></p><button type="button" class="label replay" data-replay>↺ Replay</button>
+  </div>
+</article>
+<article class="comp" id="c-scroll-words">
+  <div class="comp-info">
+    <p class="label path">C—03 · components/ui/scroll-words.js</p>
+    <h3 class="display split" data-split><span class="sr-only">ScrollWords</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">S</span><span class="char" style="--i:1">c</span><span class="char" style="--i:2">r</span><span class="char" style="--i:3">o</span><span class="char" style="--i:4">l</span><span class="char" style="--i:5">l</span><span class="char" style="--i:6">W</span><span class="char" style="--i:7">o</span><span class="char" style="--i:8">r</span><span class="char" style="--i:9">d</span><span class="char" style="--i:10">s</span></span></h3>
+    <p class="what">A paragraph that lights up word by word as you scroll.</p>
+    <dl><div><dt class="label">Why</dt><dd>Slow the reading of key sentences: you read them at the speed they appear.</dd></div><div><dt class="label">How</dt><dd>Each word's opacity is tied to the paragraph's scroll progress. Minimum opacity 0.38 to keep WCAG contrast.</dd></div></dl>
+    <ul class="chips"><li class="chip">Scroll progress</li><li class="chip">CSS</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Very low.</span></div><p class="verdict"><b>Verdict —</b> Effective but very common on award sites. Use once or twice per page, no more.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="words">
+    <span class="label live">live</span>
+    <p class="heading scrollwords" data-scrollwords style="max-width:520px;padding:0 32px;font-size:clamp(1.6rem,2.4vw,2.4rem);line-height:1.12"><span class="word">Scroll </span><span class="word">the </span><span class="word">page: </span><span class="word">each </span><span class="word">word </span><span class="word">lights </span><span class="word">up </span><span class="word">in </span><span class="word">turn, </span><span class="word">at </span><span class="word">the </span><span class="word">exact </span><span class="word">pace </span><span class="word">of </span><span class="word">your </span><span class="word">reading. </span></p>
+  </div>
+</article>
+<article class="comp" id="c-pixel-image">
+  <div class="comp-info">
+    <p class="label path">C—04 · components/ui/pixel-image.js</p>
+    <h3 class="display split" data-split><span class="sr-only">PixelImage</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">P</span><span class="char" style="--i:1">i</span><span class="char" style="--i:2">x</span><span class="char" style="--i:3">e</span><span class="char" style="--i:4">l</span><span class="char" style="--i:5">I</span><span class="char" style="--i:6">m</span><span class="char" style="--i:7">a</span><span class="char" style="--i:8">g</span><span class="char" style="--i:9">e</span></span></h3>
+    <p class="what">Images resolve from big pixels to full definition. On hover the colour original opens in a circle from the cursor.</p>
+    <dl><div><dt class="label">Why</dt><dd>Every image is dithered black and white to stay on brand; this still lets you see the real thing.</dd></div><div><dt class="label">How</dt><dd>Canvas 2D: the image is drawn tiny then scaled up without smoothing, in 7 steps (64 → 1 px). The reveal is a CSS circle clip-path positioned with custom properties.</dd></div></dl>
+    <ul class="chips"><li class="chip">Canvas 2D</li><li class="chip">clip-path</li><li class="chip">IntersectionObserver</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Low. 7 draws, then nothing.</span></div><p class="verdict"><b>Verdict —</b> Solves a real conflict (brand vs. readable projects). On touch screens the original reveals itself after the animation.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="pixel">
+    <span class="label live">live</span>
+    <div class="pix" data-pix="assets/img/p-fjordline.jpg" style="position:absolute;inset:48px;width:auto;height:auto;aspect-ratio:auto"><canvas></canvas><img class="reveal-img" src="assets/img/p-fjordline.jpg" alt=""><span class="bd"></span></div><button type="button" class="label replay" data-replay>↺ Replay</button>
+  </div>
+</article>
+<article class="comp" id="c-manifesto">
+  <div class="comp-info">
+    <p class="label path">C—05 · components/manifesto-band.js</p>
+    <h3 class="display split" data-split><span class="sr-only">ManifestoBand</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">M</span><span class="char" style="--i:1">a</span><span class="char" style="--i:2">n</span><span class="char" style="--i:3">i</span><span class="char" style="--i:4">f</span><span class="char" style="--i:5">e</span><span class="char" style="--i:6">s</span><span class="char" style="--i:7">t</span><span class="char" style="--i:8">o</span><span class="char" style="--i:9">B</span><span class="char" style="--i:10">a</span><span class="char" style="--i:11">n</span><span class="char" style="--i:12">d</span></span></h3>
+    <p class="what">The band of giant scrolling words. It speeds up, skews and reverses with your scroll.</p>
+    <dl><div><dt class="label">Why</dt><dd>A breath between the hero and About, and a way to say what I do in three words.</dd></div><div><dt class="label">How</dt><dd>Scroll velocity is sampled every frame and drives translation and skewX. The content is duplicated to loop seamlessly.</dd></div></dl>
+    <ul class="chips"><li class="chip">rAF</li><li class="chip">Scroll velocity</li><li class="chip">CSS transforms</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Low. Transforms only.</span></div><p class="verdict"><b>Verdict —</b> Nice, but a genre classic. Scroll the page to watch it react.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="band">
+    <span class="label live">live</span>
+    <div class="band" style="position:absolute;inset:auto 0;border:0"><div class="band-in"><div class="marquee" data-marquee><div class="marquee-set"><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="">Automate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="text-outline">Integrate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="">Deploy</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="text-outline">Automate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="">Integrate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="text-outline">Deploy</span><span class="sep">✳</span></span></div><div class="marquee-set"><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="">Automate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="text-outline">Integrate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="">Deploy</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="text-outline">Automate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="">Integrate</span><span class="sep">✳</span></span><span class="display" style="font-size:clamp(4rem,8vw,8rem)"><span class="text-outline">Deploy</span><span class="sep">✳</span></span></div></div><p class="label">Software, AI and cloud working for real-world operations.</p></div></div>
+  </div>
+</article>
+<article class="comp" id="c-cursor">
+  <div class="comp-info">
+    <p class="label path">C—06 · components/cursor.js</p>
+    <h3 class="display split" data-split><span class="sr-only">CustomCursor</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">C</span><span class="char" style="--i:1">u</span><span class="char" style="--i:2">s</span><span class="char" style="--i:3">t</span><span class="char" style="--i:4">o</span><span class="char" style="--i:5">m</span><span class="char" style="--i:6">C</span><span class="char" style="--i:7">u</span><span class="char" style="--i:8">r</span><span class="char" style="--i:9">s</span><span class="char" style="--i:10">o</span><span class="char" style="--i:11">r</span></span></h3>
+    <p class="what">A dot and a reticle replace the cursor. Contextual labels and magnetic buttons.</p>
+    <dl><div><dt class="label">Why</dt><dd>Make navigation feel tactile and hint at actions (“View”, “Open”) without more text in the UI.</dd></div><div><dt class="label">How</dt><dd>Two elements eased toward the pointer at different speeds (the reticle lags). Any element opts in with data-cursor=&quot;Text&quot; or data-magnetic.</dd></div></dl>
+    <ul class="chips"><li class="chip">rAF easing</li><li class="chip">Data attributes</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Very low.</span></div><p class="verdict"><b>Verdict —</b> Pleasant attribute-based API. Disabled on touch and reduced motion: the system cursor comes back.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="cursor">
+    <span class="label live">live</span>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><button type="button" class="btn-ghost" data-magnetic>data-magnetic</button><button type="button" class="btn-ghost" data-cursor="Open">data-cursor</button></div><p class="label" style="position:absolute;bottom:40px;left:0;right:0;text-align:center">Mouse only — on touch screens the system cursor stays.</p>
+  </div>
+</article>
+<article class="comp" id="c-negative">
+  <div class="comp-info">
+    <p class="label path">C—07 · components/negative-mode.js</p>
+    <h3 class="display split" data-split><span class="sr-only">NegativeMode</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">N</span><span class="char" style="--i:1">e</span><span class="char" style="--i:2">g</span><span class="char" style="--i:3">a</span><span class="char" style="--i:4">t</span><span class="char" style="--i:5">i</span><span class="char" style="--i:6">v</span><span class="char" style="--i:7">e</span><span class="char" style="--i:8">M</span><span class="char" style="--i:9">o</span><span class="char" style="--i:10">d</span><span class="char" style="--i:11">e</span></span></h3>
+    <p class="what">An easter egg: the whole site flips to negative with a circular reveal.</p>
+    <dl><div><dt class="label">Why</dt><dd>Reward the curious. The secret: the Konami code (↑ ↑ ↓ ↓ ← → ← → B A), or five taps on the “KR” logo on mobile.</dd></div><div><dt class="label">How</dt><dd>A class on &lt;html&gt; inverts colours; the View Transitions API animates the switch. Instant fallback elsewhere.</dd></div></dl>
+    <ul class="chips"><li class="chip">View Transitions API</li><li class="chip">CSS</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Zero at rest.</span></div><p class="verdict"><b>Verdict —</b> Original and almost free. The kind of detail people tell their friends about.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="negative">
+    <span class="label live">live</span>
+    <button type="button" class="btn-solid" data-negative-toggle>◐ Flip the site</button><p class="label" style="position:absolute;bottom:40px;left:0;right:0;text-align:center">↑ ↑ ↓ ↓ ← → ← → B A</p>
+  </div>
+</article>
+<article class="comp" id="c-expandable">
+  <div class="comp-info">
+    <p class="label path">C—08 · components/ui/expandable.js</p>
+    <h3 class="display split" data-split><span class="sr-only">Expandable · pixel type</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">E</span><span class="char" style="--i:1">x</span><span class="char" style="--i:2">p</span><span class="char" style="--i:3">a</span><span class="char" style="--i:4">n</span><span class="char" style="--i:5">d</span><span class="char" style="--i:6">a</span><span class="char" style="--i:7">b</span><span class="char" style="--i:8">l</span><span class="char" style="--i:9">e</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:10">·</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:11">p</span><span class="char" style="--i:12">i</span><span class="char" style="--i:13">x</span><span class="char" style="--i:14">e</span><span class="char" style="--i:15">l</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:16">t</span><span class="char" style="--i:17">y</span><span class="char" style="--i:18">p</span><span class="char" style="--i:19">e</span></span></h3>
+    <p class="what">The mobile “Read more”. On open, pixels fly from the folded edge and assemble the hidden words line by line, then the real text takes over.</p>
+    <dl><div><dt class="label">Why</dt><dd>On phones, long entries were cut with no way to read on. They needed to expand, on theme: pixels, two colours.</dd></div><div><dt class="label">How</dt><dd>Hidden lines are measured where the browser laid them out, redrawn on an off-screen canvas and sampled into 2 px dots. Each dot flies to its spot with a delay proportional to its height while a CSS mask uncovers the real text.</dd></div></dl>
+    <ul class="chips"><li class="chip">Canvas 2D</li><li class="chip">Range API</li><li class="chip">CSS mask</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★★<span style="opacity:.3"></span></span></div><div class="row"><span>Cost</span><span>Low and short-lived (≈ 1.2 s), then nothing.</span></div><p class="verdict"><b>Verdict —</b> A useful detail AND a signature. Honours reduced motion. On desktop the full text is simply shown.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="expand">
+    <span class="label live">live</span>
+    <div style="max-width:420px;padding:0 32px"><div id="lab-xp" class="xp xp-force"><div class="inner"><p style="line-height:1.6;color:var(--p80)">Two colours, no “…”. This paragraph is folded: click “Read more” and watch the pixels leave the edge, fall and settle one by one onto the shape of the letters, line after line, until they write the hidden words. Close it: the text breaks back into pixels that fly off upward. On a phone this is how every long entry opens.</p></div><canvas class="xp-canvas"></canvas></div><button type="button" class="xp-btn label" style="display:inline-flex" aria-expanded="false" aria-controls="lab-xp"><span class="xp-ico"><i></i><i></i><i></i><i></i><i></i></span><span class="xp-txt">Read more</span></button></div>
+  </div>
+</article>
+<article class="comp" id="c-counter">
+  <div class="comp-info">
+    <p class="label path">C—09 · components/ui/counter.js</p>
+    <h3 class="display split" data-split><span class="sr-only">Counter</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">C</span><span class="char" style="--i:1">o</span><span class="char" style="--i:2">u</span><span class="char" style="--i:3">n</span><span class="char" style="--i:4">t</span><span class="char" style="--i:5">e</span><span class="char" style="--i:6">r</span></span></h3>
+    <p class="what">Numbers that roll up to their value (projects, repositories…).</p>
+    <dl><div><dt class="label">Why</dt><dd>Give weight to key figures and rhythm to page headers.</dd></div><div><dt class="label">How</dt><dd>A requestAnimationFrame loop with easing, triggered once in view. Leading zeros so the width never jumps.</dd></div></dl>
+    <ul class="chips"><li class="chip">rAF</li><li class="chip">IntersectionObserver</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★<span style="opacity:.3">★</span></span></div><div class="row"><span>Cost</span><span>Very low.</span></div><p class="verdict"><b>Verdict —</b> Useful but ordinary. It earns its place, nothing more.</p></div>
+  </div>
+  <div class="comp-demo" data-demo="counter">
+    <span class="label live">live</span>
+    <div style="display:flex;gap:48px;text-align:center"><div><p class="display" style="font-size:96px;line-height:.9"><span data-counter="12">00</span></p><p class="label">Components</p></div><div><p class="display" style="font-size:96px;line-height:.9"><span data-counter="64">00</span></p><p class="label">Thresholds</p></div><div><p class="display" style="font-size:96px;line-height:.9"><span data-counter="2">00</span></p><p class="label">Colours</p></div></div><button type="button" class="label replay" data-replay-counter>↺ Replay</button>
+  </div>
+</article>
+<article class="comp" id="c-journey">
+  <div class="comp-info">
+    <p class="label path">C—10 · components/journey.js</p>
+    <h3 class="display split" data-split><span class="sr-only">JourneySection</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">J</span><span class="char" style="--i:1">o</span><span class="char" style="--i:2">u</span><span class="char" style="--i:3">r</span><span class="char" style="--i:4">n</span><span class="char" style="--i:5">e</span><span class="char" style="--i:6">y</span><span class="char" style="--i:7">S</span><span class="char" style="--i:8">e</span><span class="char" style="--i:9">c</span><span class="char" style="--i:10">t</span><span class="char" style="--i:11">i</span><span class="char" style="--i:12">o</span><span class="char" style="--i:13">n</span></span></h3>
+    <p class="what">The Valparaíso → Bergen trip on a dotted globe, with a kilometre counter.</p>
+    <dl><div><dt class="label">Why</dt><dd>Tell my story visually instead of in a sentence.</dd></div><div><dt class="label">How</dt><dd>A dot globe sampled from a land mask, a great-circle arc, and progress tied to scroll with pinning on large screens.</dd></div></dl>
+    <ul class="chips"><li class="chip">Canvas 2D</li><li class="chip">Sticky pinning</li><li class="chip">Geodesy</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★<span style="opacity:.3">★</span></span></div><div class="row"><span>Cost</span><span>Medium while scrolling, zero after.</span></div><p class="verdict"><b>Verdict —</b> More personal than technical, but it makes the About section memorable. No isolated demo: it needs the page scroll.</p></div>
+  </div>
+  <div class="comp-demo" >
+    
+    <div style="text-align:center"><p class="display text-outline" style="font-size:clamp(4rem,7vw,7rem)">JourneySection</p><a class="btn-ghost" style="margin-top:20px" href="index.html#about">See it on the site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+  </div>
+</article>
+<article class="comp" id="c-stars">
+  <div class="comp-info">
+    <p class="label path">C—11 · core/stars.js</p>
+    <h3 class="display split" data-split><span class="sr-only">Star hunt · StarGame</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">S</span><span class="char" style="--i:1">t</span><span class="char" style="--i:2">a</span><span class="char" style="--i:3">r</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:4">h</span><span class="char" style="--i:5">u</span><span class="char" style="--i:6">n</span><span class="char" style="--i:7">t</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:8">·</span><span style="display:inline-block">&nbsp;</span></span><span class="split-line " aria-hidden="true"><span class="char" style="--i:9">S</span><span class="char" style="--i:10">t</span><span class="char" style="--i:11">a</span><span class="char" style="--i:12">r</span><span class="char" style="--i:13">G</span><span class="char" style="--i:14">a</span><span class="char" style="--i:15">m</span><span class="char" style="--i:16">e</span></span></h3>
+    <p class="what">Stars hidden around the site. Finding all three unlocks a mini-game.</p>
+    <dl><div><dt class="label">Why</dt><dd>Invite people to explore the whole site instead of skimming the home page.</dd></div><div><dt class="label">How</dt><dd>Progress is kept in localStorage, a toast hints at the next one, and the game only boots once unlocked.</dd></div></dl>
+    <ul class="chips"><li class="chip">localStorage</li><li class="chip">Canvas 2D</li><li class="chip">Lazy init</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★<span style="opacity:.3">★</span></span></div><div class="row"><span>Cost</span><span>Zero until the game starts.</span></div><p class="verdict"><b>Verdict —</b> Good for engagement. I won't tell you where they are.</p></div>
+  </div>
+  <div class="comp-demo" >
+    
+    <div style="text-align:center"><p class="display text-outline" style="font-size:clamp(4rem,7vw,7rem)">Star</p><a class="btn-ghost" style="margin-top:20px" href="index.html">See it on the site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+  </div>
+</article>
+<article class="comp" id="c-chatbot">
+  <div class="comp-info">
+    <p class="label path">C—12 · components/chatbot.js</p>
+    <h3 class="display split" data-split><span class="sr-only">Chatbot</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">C</span><span class="char" style="--i:1">h</span><span class="char" style="--i:2">a</span><span class="char" style="--i:3">t</span><span class="char" style="--i:4">b</span><span class="char" style="--i:5">o</span><span class="char" style="--i:6">t</span></span></h3>
+    <p class="what">The assistant in the bottom-right corner that answers questions about my work.</p>
+    <dl><div><dt class="label">Why</dt><dd>Answer recruiters at any hour, with no paid API and nothing sent to a third party.</dd></div><div><dt class="label">How</dt><dd>Local engine: text normalisation, intent detection with weighted keywords and a small knowledge base. Loaded after the main content.</dd></div></dl>
+    <ul class="chips"><li class="chip">Vanilla JS</li><li class="chip">Home-made NLP</li><li class="chip">Lazy loading</li></ul>
+    <div class="comp-meta"><div class="row"><span>Relevance</span><span>★★<span style="opacity:.3">★</span></span></div><div class="row"><span>Cost</span><span>Low, lazy-loaded.</span></div><p class="verdict"><b>Verdict —</b> Interesting logic, plainer visually. It won't replace a real language model, but it costs nothing and leaks nothing.</p></div>
+  </div>
+  <div class="comp-demo" >
+    
+    <div style="text-align:center"><p class="display text-outline" style="font-size:clamp(4rem,7vw,7rem)">Chatbot</p><a class="btn-ghost" style="margin-top:20px" href="index.html">See it on the site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+  </div>
+</article>
+  <div class="px retired"><h3 class="label">Retired from the site</h3><ul class="cells c2"><li><p class="nm">GridScene</p><p>A three.js background grid from the first version. Replaced by DitherHero: ~600 KB of library for a grid was too much.</p></li><li><p class="nm">ProjectCard</p><p>Classic project cards. Replaced by a list index, more editorial and quicker to scan.</p></li></ul></div>
+</section>
+<section id="experiments" style="border-top:1px solid var(--line)">
+  <div class="px lab-sec-head"><div><div class="sec-tag label"><span class="bar"></span><span style="white-space:nowrap">[ <span class="t-paper">02</span> / 02 ]</span><span>·</span><span>Experiments</span></div><h2 class="display split text-outline" data-split><span class="sr-only">Experiments</span><span class="split-line " aria-hidden="true"><span class="char" style="--i:0">E</span><span class="char" style="--i:1">x</span><span class="char" style="--i:2">p</span><span class="char" style="--i:3">e</span><span class="char" style="--i:4">r</span><span class="char" style="--i:5">i</span><span class="char" style="--i:6">m</span><span class="char" style="--i:7">e</span><span class="char" style="--i:8">n</span><span class="char" style="--i:9">t</span><span class="char" style="--i:10">s</span></span></h2></div><p>No client, no constraints. Ideas tried for fun — some will end up on the site, others won't.</p></div>
+  <div class="exp-grid"><article class="exper" id="e-reaction-diffusion">
+  <div class="stage" data-exp="rd"><canvas></canvas><span class="label hint">Click and drag to seed</span><div class="ctrl" data-rd-ctrl><button type="button" class="chip" data-preset="0" aria-pressed="true">Coral</button><button type="button" class="chip" data-preset="1" aria-pressed="false">Mitosis</button><button type="button" class="chip" data-preset="2" aria-pressed="false">Maze</button><button type="button" class="chip" data-reset>↺</button></div></div>
+  <div class="info"><div class="top label"><span>E—01 · 2026.10</span><span>Status : <span class="t-paper">Ongoing</span></span></div><h3 class="display">Gray-Scott</h3><p class="d">Two simulated chemicals feeding on and consuming each other. Living patterns — coral, cells, mazes — emerge from two equations, simulated live and dithered in two colours.</p><div class="chips"><span class="chip ">Canvas 2D</span><span class="chip ">Typed arrays</span><span class="chip ">Gray-Scott</span></div></div>
+</article>
+<article class="exper" id="e-particle-type">
+  <div class="stage" data-exp="type"><canvas></canvas><span class="label hint">Hover · click to explode</span><div class="ctrl"><label class="label" for="tam-word" style="align-self:center">Word</label><input id="tam-word" data-tam-word value="LAB" maxlength="10"></div></div>
+  <div class="info"><div class="top label"><span>E—02 · 2026.10</span><span>Status : <span class="t-paper">Stable</span></span></div><h3 class="display">Type as matter</h3><p class="d">A word sampled into dots, each dot a particle on a spring pulling it home. The cursor blows them away. Type your own word.</p><div class="chips"><span class="chip ">Canvas 2D</span><span class="chip ">Spring physics</span></div></div>
+</article>
+<article class="exper" id="e-flow-field">
+  <div class="stage" data-exp="flow"><canvas></canvas><span class="label hint">Move the mouse inside the frame</span></div>
+  <div class="info"><div class="top label"><span>E—03 · 2026.10</span><span>Status : <span class="t-paper">Stable</span></span></div><h3 class="display">Flow field</h3><p class="d">Thousands of particles follow a direction field that ripples over time, leaving a slowly fading ink trail. The cursor makes a vortex.</p><div class="chips"><span class="chip ">Canvas 2D</span><span class="chip ">Vector fields</span></div></div>
+</article>
+<article class="exper" id="e-ascii">
+  <div class="stage" data-exp="ascii"><canvas></canvas><span class="label hint">Nothing to do, just watch</span></div>
+  <div class="info"><div class="top label"><span>E—04 · 2026.10</span><span>Status : <span class="t-paper">Archived</span></span></div><h3 class="display">ASCII globe</h3><p class="d">A rotating sphere rendered in characters. Meant for the hero, dropped for the dithered WebGL version, but too pretty to delete.</p><div class="chips"><span class="chip ">Canvas 2D</span><span class="chip ">ASCII</span></div></div>
+</article></div>
+</section>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="foot-art">
+    <img src="assets/art/ridge-lines.png" alt="" loading="lazy">
+    <div class="sh"></div>
+    <p class="display foot-name prox" data-prox="120,520" aria-label="Kaspian Rowe"><span class="char" aria-hidden="true">K</span><span class="char" aria-hidden="true">a</span><span class="char" aria-hidden="true">s</span><span class="char" aria-hidden="true">p</span><span class="char" aria-hidden="true">i</span><span class="char" aria-hidden="true">a</span><span class="char" aria-hidden="true">n</span><span class="char" aria-hidden="true">&nbsp;</span><span class="char" aria-hidden="true">R</span><span class="char" aria-hidden="true">o</span><span class="char" aria-hidden="true">w</span><span class="char" aria-hidden="true">e</span></p>
+  </div>
+  <div class="foot-grid px">
+    <div class="foot-brand">
+      <div class="r1"><span class="mk">KR</span><button type="button" class="star-btn " data-star="footer" aria-label="Hidden star" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button></div>
+      <p class="t1">Full-stack &amp; AI developer — Bergen, Norway.</p>
+      <p class="t2">I help teams automate, streamline and modernise their operations through software, cloud and artificial intelligence.</p>
+    </div>
+    <nav class="foot-col" aria-label="Navigation"><p class="label">01</p><h3 class="heading">Navigation</h3><ul><li><a class="foot-link" href="index.html">Home</a></li><li><a class="foot-link" href="projects.html">Projects</a></li><li><a class="foot-link" href="lab.html">Lab</a></li></ul></nav>
+    <nav class="foot-col" aria-label="Social"><p class="label">02</p><h3 class="heading">Social</h3><ul>
+      <li><a class="foot-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+      <li><a class="foot-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+      <li><a class="foot-link" href="mailto:hello@kaspianrowe.dev">Email ↗</a></li></ul></nav>
+    <nav class="foot-col" aria-label="Legal"><p class="label">03</p><h3 class="heading">Legal</h3><ul>
+      <li><a class="foot-link" href="privacy-policy.html">Privacy policy</a></li>
+      <li><a class="foot-link" href="legal-notice.html">Legal notice</a></li>
+      <li><button type="button" class="foot-link" data-cookie-open>Manage cookies</button></li></ul></nav>
+    <div class="foot-col"><p class="label">04</p><h3 class="heading">Bergen</h3><p class="mono">Vestland, Norway</p><p class="mono" style="color:var(--p55)">60.39°N · 5.32°E</p></div>
+  </div>
+  <div class="foot-bar px">
+    <div class="space"><p class="label">© 2026 Kaspian Rowe. All rights reserved</p><p class="label" style="color:var(--p55)">Design &amp; code — Kaspian Rowe · Big Shoulders Display, Geist · Vanilla JS, Canvas, WebGL</p></div>
+    <p class="label stars" title="Stars are hidden across the site…"><span>✦</span><span data-star-count>0 / 3 stars found</span></p>
+    <button type="button" class="label" data-top aria-label="Back to top">Back to top <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+  </div>
+</footer>
+</div>
+<div class="assist" data-assist>
+  <div class="assist-tip crosshair" data-assist-tip><p>A question about my work? Ask my assistant.</p><button type="button" aria-label="Hide invitation" data-assist-hide><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <button type="button" class="assist-btn" aria-label="KR Assistant — Open chat" data-chat-open data-cursor="Chat"><span class="mk">KR<span class="ping"><i></i><b></b></span></span><span class="label" data-i18n="ui.assistant">Assistant</span></button>
+</div>
+<section class="chat" role="dialog" aria-modal="false" aria-label="KR Assistant" data-chat>
+  <div class="chat-head"><span class="mk">KR</span><div class="ttl"><b>Assistant</b><span class="label">Online · local answers</span></div>
+    <button type="button" aria-label="Reset conversation" data-chat-reset><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.5M4 4v4.5h4.5"/></svg></button><button type="button" aria-label="Minimise" data-chat-min><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14"/></svg></button><button type="button" aria-label="Close chat" data-chat-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="chat-body" data-chat-body aria-live="polite"></div>
+  <div class="chat-sugg no-scrollbar" data-chat-sugg></div>
+  <form class="chat-form" data-chat-form autocomplete="off"><span class="pr" aria-hidden="true">›</span><label class="sr-only" for="chat-in">Your question</label><input id="chat-in" name="q" placeholder="Type your message..." maxlength="300"><button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button></form>
+</section>
+<div class="cookie" role="dialog" aria-label="Cookies &amp; privacy" data-cookie>
+  <p class="label">✦ Cookies &amp; Privacy</p>
+  <p class="t">This site uses cookies to improve your experience (anonymous analytics, preferences) and to catch technical errors. Your data is handled in line with GDPR. <a href="privacy-policy.html">privacy policy</a></p>
+  <div class="row"><button type="button" class="btn-ghost" data-cookie-no>Decline</button><button type="button" class="btn-solid" data-cookie-yes>Accept</button></div>
+</div>
+<div class="toast" role="status" aria-live="polite" data-toast><span>✦</span><span class="label" data-toast-text></span></div>
+<div class="modal" role="dialog" aria-modal="true" aria-label="Star game" data-game>
+  <div class="modal-box crosshair">
+    <div class="modal-head"><span class="label t-paper">✦ StarGame · catch the falling stars</span><button type="button" aria-label="Close game" data-game-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <canvas data-game-canvas width="960" height="600"></canvas>
+    <div class="modal-foot"><span class="label" data-game-score>Score 000</span><span class="label">← → or drag · Esc to quit</span></div>
+  </div>
+</div>
+<div class="curtain curtain-a" aria-hidden="true"></div>
+<div class="curtain curtain-b" aria-hidden="true"><span class="label" data-curtain-label>Index</span></div>
+<script src="assets/js/landmask.js"></script>
+<script src="assets/js/thumbs.js"></script>
+<script src="assets/js/fx.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/chat.js" defer></script>
+<script src="assets/js/lab.js"></script>
+</body>
+</html>
