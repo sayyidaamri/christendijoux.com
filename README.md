@@ -1,15 +1,20 @@
 # KASPIAN.ROWE — portfolio (native HTML clone)
 
+<p align="center"><img src="docs/preview/homepage.gif" alt="Homepage preview — full-page scroll" width="100%"></p>
+
 A 1:1 rebuild of the look and behaviour of christendijoux.com as an original site for a fictional
 systems & AI engineer, **Kaspian Rowe** (monogram **KR**, Bergen, Norway). Plain HTML/CSS/JS, no framework,
 no build step needed to view it.
 
 ## Open it
+
 Double-click `index.html` (works from `file://`, offline). Everything — fonts, images, scripts — is local.
 Tested in Chromium/Edge; any modern browser works.
 
 ## Structure
+
 This folder is the finished static site. Upload it as-is to any static host.
+
 ```
 index.html                   home
 projects.html                project index (search + language filter)
@@ -33,14 +38,17 @@ Case studies (`project/`): halvorsen-marine, tidewatch, ledgerly, fjordline-inst
 skills-atlas, wrist-folio, gull-quest, saltmarket, taskharbor, echo-radio.
 
 ## Editing
+
 The HTML pages in this folder are generated output; the generator (`build/`: `data.mjs`, `build.mjs`, and the
 `art.py` / `thumbs.py` / `landmask.py` helpers) is **not** included here. Edit the HTML, CSS and JS directly.
 Keep these in sync by hand when you change them:
+
 - Copy that repeats on every page (header, footer, brand name, email, social links).
 - `assets/js/thumbs.js` — if you add or replace a photo in `assets/img/`, its grayscale thumbnail must be
   regenerated, otherwise the dither effect won't pick it up from `file://`.
 
 ## States & easter eggs to try
+
 - Preloader (first visit per tab) and curtain transitions between pages.
 - Assistant (bottom-right): open, ask, minimise, reset, close.
 - Cookie banner: Accept / Decline; reopen with “Manage cookies” in the footer.
@@ -50,6 +58,7 @@ Keep these in sync by hand when you change them:
 - Contact form validation (demo only — nothing is sent).
 
 ## Placeholders to replace
+
 Name/brand, email `hello@kaspianrowe.dev`, phone, GitHub/LinkedIn URLs, all project names/clients (fictional),
 “View site / View code” links (`#`), the resume content (`cv.html`). Search the HTML files for `kaspianrowe`
 and `Kaspian` to find every occurrence.
